@@ -1,14 +1,11 @@
 import './App.css';
-import Button from '@mui/material/Button';
+import DashboardLayoutBasic from './layouts/Dashboard/DashboardLayoutBasic';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>Hello world!</div>
-        <Button variant="contained">Hello world</Button>
-      </header>
-    </div>
+    <>
+      <DashboardLayoutBasic />
+    </>
   );
 }
 

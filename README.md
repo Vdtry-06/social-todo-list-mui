@@ -46,6 +46,8 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## mui install
+
 - `npm install @mui/material @emotion/react @emotion/styled`
 - `npm install @fontsource/roboto`
 - `npm install @mui/icons-material`
+- `npm install @toolpad/core/`
