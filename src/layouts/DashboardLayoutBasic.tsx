@@ -21,33 +21,9 @@ export default function DashboardLayoutBasic(props: any) {
     const renderContent = () => {
         const path = router.pathname;
         switch(path) {
-            case '/dashboard': return <DashboardPage />;
-            case '/list-items': return <ListItems />;
-            case '/action/create-item': return <CreateItem/>
-            case '/action/get-item': return <GetItem/>
-            case '/action/update-item': return <UpdateItem/>
-            case '/action/delete-item': return <DeleteItem/>
-            default:
-                return (
-                    <Grid container spacing={1}>
-                        <Grid size={12}>
-                            <h2>Page Not Found</h2>
-                        </Grid>
-                    </Grid>
-                );
-        }     
-    }
-    
-    return (
-        <AppProvider
-            navigation={NAVIGATION}
-            router={router}
-            theme={demoTheme}
-            window={demoWindow}
-        >
-            <DashboardLayout>
-                <PageContainer>
-                    {renderContent()}
+            case '/dashboard': return (
+                <>
+                    <DashboardPage />
                     <Grid container spacing={1}>
                         <Grid size={5} />
                         <Grid size={12} >
@@ -78,6 +54,34 @@ export default function DashboardLayoutBasic(props: any) {
                             <SkeletonPlaceholder height={100} />
                         </Grid>
                     </Grid>
+                </>
+            );
+            case '/list-items': return <ListItems />;
+            case '/action/create-item': return <CreateItem/>
+            case '/action/get-item': return <GetItem/>
+            case '/action/update-item': return <UpdateItem/>
+            case '/action/delete-item': return <DeleteItem/>
+            default:
+                return (
+                    <Grid container spacing={1}>
+                        <Grid size={12}>
+                            <h2>Page Not Found</h2>
+                        </Grid>
+                    </Grid>
+                );
+        }     
+    }
+    
+    return (
+        <AppProvider
+            navigation={NAVIGATION}
+            router={router}
+            theme={demoTheme}
+            window={demoWindow}
+        >
+            <DashboardLayout>
+                <PageContainer>
+                    {renderContent()}
                 </PageContainer>
             </DashboardLayout>
         </AppProvider>
