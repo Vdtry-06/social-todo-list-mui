@@ -1,5 +1,5 @@
 import './App.css';
-import DashboardLayoutBasic from './layouts/Dashboard/DashboardLayoutBasic';
+import DashboardLayoutBasic from './layouts/DashboardLayoutBasic';
 
 function App() {
   return (

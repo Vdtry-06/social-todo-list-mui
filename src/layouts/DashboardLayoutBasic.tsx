@@ -1,11 +1,11 @@
 import { AppProvider } from "@toolpad/core";
-import { useDemoRouter } from "./useDemoRouter";
+import { useDemoRouter } from "../hooks/useDemoRouter";
 import Grid from "@mui/material/Grid";
 import { PageContainer } from '@toolpad/core/PageContainer';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
-import { SkeletonPlaceholder } from "./SkeletonPlaceholder";
-import { NAVIGATION } from "./NavigationConfig";
-import { demoTheme } from "./DemoTheme";
+import { SkeletonPlaceholder } from "../components/SkeletonPlaceholder";
+import { NAVIGATION } from "../config/NavigationConfig";
+import { demoTheme } from "../config/DemoTheme";
 
 export default function DashboardLayoutBasic(props: any) {
     const { window } = props;
