@@ -1,13 +1,13 @@
 import axios from 'axios';
-import { ListItemsResponse } from '../types';
+import { 
+    ListItemsResponse,
+    ListItemsParams,
+    RequestItem,
+} from '../types';
 
 const BASE_URL = 'http://localhost:8080';
 
-interface ListItemsParams {
-    page?: number;
-    status?: string;
-    limit?: number;
-}
+
 
 export const listItems = async (params?: ListItemsParams): Promise<ListItemsResponse> => {
     const response = await axios.get<ListItemsResponse>(`${BASE_URL}/v1/items`, {
@@ -15,3 +15,11 @@ export const listItems = async (params?: ListItemsParams): Promise<ListItemsResp
     });
     return response.data;
 };
+
+export const createItems = async (request: RequestItem) => {
+    const response = await axios.post(
+        `${BASE_URL}/v1/items`,
+        request,
+    )
+    return response.data;
+}

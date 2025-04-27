@@ -12,15 +12,7 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-
-interface Item {
-    id: number;
-    created_at: string;
-    updated_at: string;
-    title: string;
-    description: string;
-    status: string;
-}
+import { Item } from "../../types";
 
 interface Column {
     id: keyof Item;

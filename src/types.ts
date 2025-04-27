@@ -1,10 +1,7 @@
-export interface Item {
+export interface Item extends RequestItem {
     id: number;
     created_at: string;
     updated_at: string;
-    title: string;
-    description: string;
-    status: string;
 }
 
 export interface Paging {
@@ -21,4 +18,16 @@ export interface ListItemsResponse {
     data: Item[];
     paging: Paging;
     filter: Filter;
+}
+
+export interface ListItemsParams {
+    page?: number;
+    status?: string;
+    limit?: number;
+}
+
+export interface RequestItem {
+    title: string;
+    description: string;
+    status: string;
 }
