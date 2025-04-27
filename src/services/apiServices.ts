@@ -25,3 +25,10 @@ export const getItem = async (id: number) => {
     const response = await axios.get(`${BASE_URL}/v1/items/${id}`);
     return response.data;
 }
+
+export const updateItem = async (id: number, request: RequestItem) => {
+    const response = await axios.patch(`${BASE_URL}/v1/items/${id}`, 
+        request
+    );
+    return response.data;
+}
