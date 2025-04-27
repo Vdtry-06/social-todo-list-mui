@@ -32,3 +32,8 @@ export const updateItem = async (id: number, request: RequestItem) => {
     );
     return response.data;
 }
+
+export const deleteItem = async (id: number) => {
+    const response = await axios.delete(`${BASE_URL}/v1/items/${id}`);
+    return response.data;
+}
