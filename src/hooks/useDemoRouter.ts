@@ -7,6 +7,10 @@ export function useDemoRouter(initialPath: string): Router {
     return React.useMemo(() => ({
         pathname,
         searchParams: new URLSearchParams(),
-        navigate: (path: string | URL) => setPathname(String(path)),
+        navigate: (path: string | URL) => {
+            const newPath = String(path);
+            setPathname(newPath);
+            window.history.pushState({}, '', newPath);
+        },
     }), [pathname]);
 }

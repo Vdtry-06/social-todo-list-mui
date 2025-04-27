@@ -17,7 +17,7 @@ export const NAVIGATION: Navigation = [
         icon: <DashboardIcon />,
     },
     {
-        segment: 'list',
+        segment: 'list-items',
         title: 'List items',
         icon: <ShoppingCartIcon />,
     },
@@ -34,22 +34,22 @@ export const NAVIGATION: Navigation = [
         icon: <BarChartIcon />,
         children: [
             {
-                segment: 'post',
+                segment: 'create-item',
                 title: 'Create item',
                 icon: <DescriptionIcon />,
             },
             {
-                segment: 'get',
+                segment: 'get-item',
                 title: 'Get item',
                 icon: <DescriptionIcon />,
             },
             {
-                segment: 'update',
+                segment: 'update-item',
                 title: 'Update item',
                 icon: <DescriptionIcon />,
             },
             {
-                segment: 'delete',
+                segment: 'delete-item',
                 title: 'Delete item',
                 icon: <DescriptionIcon />,
             }
